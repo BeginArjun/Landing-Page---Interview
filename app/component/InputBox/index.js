@@ -67,7 +67,7 @@ const InputBox = () => {
         className={`${theme === "light" ? "bg-black text-white disabled:text-slate-300" : "bg-white text-black disabled:text-[#0f0f0f]"} px-2 lg:py-5 py-2 lg:rounded-lg rounded-[4px] lg:w-[190px] w-full lg:h-[48px] inline-flex items-center justify-center`}
       >
         {isLoading ? (
-          <Image src="./assets/loader.svg" className="animate-spin" width={50} height={50} />
+          <Image src="./assets/loader.svg"  alt='Loader' className="animate-spin" width={50} height={50} />
         ) : isValidEmail ? (
           <Image src={theme === "light" ? "/assets/light-check.svg" : "/assets/dark-check.svg"} width={50} height={50} />
         ) : (
