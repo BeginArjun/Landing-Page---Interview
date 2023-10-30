@@ -1,5 +1,6 @@
 import { Inter , Montserrat,Poppins} from 'next/font/google'
 import '../globals.css'
+import Navbar from '../component/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 const mont=Montserrat({subsets:['latin'],weight:["400","600","700"],variable:"--body-font"})
@@ -14,6 +15,7 @@ export default function ProductLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} ${mont.className} ${poppins.className} relative`}>
+        <Navbar/>
           {children}
       </body>
     </html>

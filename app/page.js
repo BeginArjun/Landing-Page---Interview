@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(()=>{
     setInterval(()=>{
       setTimer(true)
-    },3500)
+    },37000)
   },[])
   return (
     <main className={`${theme==='light'?'bg-[--background] text-black':'bg-[--dark] text-white'} 

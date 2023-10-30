@@ -8,11 +8,11 @@ const Card=()=>{
     const router=useRouter()
     const {theme}=useTheme()
     // Redirect User to Product Page after delay of 3sec
-    // useEffect(()=>{
-    //     setTimeout(()=>{
-    //         router.push('/product')
-    //     },3000)
-    // },[])
+    useEffect(()=>{
+        setTimeout(()=>{
+            router.push('/product')
+        },3000)
+    },[])
     return(
         <motion.div 
         initial={{scale:0}}

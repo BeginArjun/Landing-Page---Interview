@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "@/app/context/ThemeContext";
 const Timer=()=>{
-    const [time,setTime]=useState(3)
+    const [time,setTime]=useState(30)
     const {theme}=useTheme()
     useEffect(()=>{
         const interval=setInterval(()=>setTime((prev)=>prev!==0?prev-1:prev=prev),1000)
@@ -18,7 +18,7 @@ const Timer=()=>{
             </div>
             <p className="lg:text-[64px]">:</p>
             <div className="flex flex-col items-center justify-center">
-                <p  className="lg:text-[64px] text-4xl">0{time}</p>
+                <p  className="lg:text-[64px] text-4xl">{time<10?'0'+time.toString():time}</p>
                 <p>Seconds</p>
             </div>
         </div>
